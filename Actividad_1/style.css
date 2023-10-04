@@ -1,0 +1,546 @@
+:root{
+    --marronClaro: #f4a460;
+    --azul: #60b0f4;
+    --grisPagina: #FDFBF9;
+    --grisBg: #CEA283;
+    --negro: #191919;
+    --fuente: 'Lato', sans-serif;
+    --marronOscuro: rgba(59, 2, 2, .8);
+    --sombra: 0px 3px 4px rgba(0, 0, 0, 0.5);
+    --sombraLibros: -4px 4px 8px rgba(0, 0, 0, 0.8);
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-size: 1.6rem;
+    margin: 0 auto;
+    width: 90%;
+    background-color: var(--grisBg);
+    font-family: var(--fuente);
+  }
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+}
+
+h1{
+    font-size: 3.8rem;
+}
+
+h2{
+    font-size: 2.4rem;
+}
+
+h3{
+    font-size: 2rem;
+}
+
+.header{
+    background-image: url(./src/bg.jpg);    
+    background-size: contain;
+    width: 100%;
+    text-align: center;
+    font-weight: 700;
+    box-shadow: 0 0 6px var(--negro) ;
+    border-radius: 0 0 0.5rem 0.5rem;
+}
+
+.header-titulo{
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    padding: 1.5rem 0;
+}
+
+.header-span{
+    color: var(--marronOscuro);
+}
+
+img{
+    width: 100%;
+}
+/* END HEADER */
+
+/* NAV */
+.nav{
+    background-color: rgba(59, 2, 2, 0.9);
+    margin: 1rem 0 0 0;
+    box-shadow: 0 0 6px var(--negro) ;
+    width: 100%;
+    border-radius: 0.5rem 0.5rem 0 0;
+    position: sticky;
+    top:0;
+    z-index: 100;
+}
+
+.nav__lista{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    list-style: none;
+}
+
+.nav__lista li{
+    text-align: center;
+    border-right: solid 0.1px var(--grisPagina);
+    padding: 0.7rem 10rem 0.7rem 0.7rem;
+
+}
+
+.nav__lista-enlace{
+    color: var(--grisPagina);
+    text-decoration: none;
+    font-size: 2rem;
+    height: 1rem;
+    transition: color 0.3s ease;
+}
+.nav__lista li:nth-child(4){
+    border: none;
+}
+
+
+.nav__lista-enlace:visited{
+    font-style: none;
+    text-decoration: none;
+}
+
+.nav__lista-busqueda{
+    border: none;
+    outline: none;
+    background-color: transparent;
+    border-bottom: 0.1rem solid var(--grisPagina);
+    width: 24rem;
+    color: var(--grisPagina);
+    font-size: 2rem;
+    transition: background-color 0.5s ease;
+}
+
+.nav__lista-busqueda::placeholder{
+    color: var(--grisPagina);
+}
+
+
+
+.nav__lista-boton{
+    border: none;
+    background-color: transparent;
+    background-image: url(./src/search.svg);
+    width: 2rem;
+    height: 1.8rem;
+    filter: invert();
+    background-position: center;
+    background-repeat: none;
+    background-size: cover;
+    margin-left: 2rem;
+    transition: background-image 0.3s ease;
+}
+
+.nav__lista-busqueda:focus{
+    background: linear-gradient(0deg, rgba(255,255,255,0.1) 10%, rgba(59, 22, 22, 0.1));
+}
+
+.nav__lista-enlace:hover{
+    color: var(--azul);
+}
+
+.nav__lista-boton:hover{
+    filter: none;
+}
+
+.mapa{
+    position: sticky;
+    width: 100%;
+    font-size: 1.2rem;
+    background-image: url(./src/bg.jpg);    
+    background-size: contain;
+    border-radius: 0 0 1rem 1rem;
+    padding: 0.8rem 2rem;
+    box-shadow: var(--sombra);
+    position: sticky;
+    top:7rem;
+    z-index: 99;
+}
+
+.mapa-enlaces{
+    text-decoration: none;
+    color: var(--negro);
+}
+
+.mapa-enlaces:visited{
+    text-decoration: none;
+    color: var(--negro);
+}
+
+.mapa-enlaces:hover{
+    color: var(--azul);
+}
+
+.mapa-separadores{
+    padding: 0 0.5rem;
+    color: var(--azul);
+    font-weight: 700;
+}
+
+.main{
+    width: 100%;
+    margin: 1rem;
+    background-color: var(--grisPagina);
+    border-radius: 1rem;
+    box-shadow: 0 0 6px var(--negro) ;
+    background-image: url(./src/bg-main.jpg);
+    background-position: center;
+    background-size: contain;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 4rem 2rem;
+    padding: 2rem;
+    width: 20rem;
+    background-color: rgba(59, 22, 22, 1);
+    border-radius: 1rem 0;
+    box-shadow: var(--sombraLibros);
+    
+}
+
+.card-text{
+    padding: 0.5rem;
+    color: var(--grisPagina);
+    font-weight: 300;
+}
+
+.card-boton{
+    padding: 1rem;
+    width: 90%;
+    background-color: var(--grisPagina);
+    border-radius: 0.5rem;
+    border: none;
+}
+
+.card-boton:hover{
+    background-color: var(--azul);
+    color: var(--grisPagina);
+}
+
+.hero{
+    height: 50rem;
+    width: 100%;
+    background-image: url(./src/bg-hero.jpg);
+    background-position:top;
+    box-shadow: 0 0 6px var(--negro) ;
+}
+
+.hero-opacity{
+    background-color: rgba(0,0,0, 0.6);
+    width: 100%;
+}
+
+.hero_text_container {
+    width: 100%;
+    height: 50rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;    text-align: center;
+}
+.hero-text {
+    width: 70%;
+    color: var(--grisPagina);
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.hero-text:hover{
+    color: var(--azul);
+}
+
+.main-opacity{
+    width: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    background-color: rgba(255,255,255, 0.4);
+    border-radius: 1rem;
+    backdrop-filter: blur(0.1rem);
+}
+
+@media (max-width: 720px){
+    .nav__lista{
+        display: flex;
+        padding: 0;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .nav__lista-busqueda{
+        text-align: center;
+    }
+
+    .nav__lista li{
+        border: none;
+        text-align: center;
+        padding: 1rem 0;
+
+    }
+    .nav__lista-boton{
+        margin-left: -2rem;
+    }
+
+    .mapa{
+        position: initial;
+    }
+}
+
+
+
+.contenido{
+    background-color: var(--grisPagina);
+    padding: 2rem;
+    width: 100%;
+    height: 50%;
+    display: grid;
+    grid-template-areas: 
+    "img titulo boton"
+    "img extra valoracion"
+    "img sinopsis sinopsis";
+    grid-template-columns: 1fr 2fr 10rem;
+    grid-template-rows: 0.8fr 3fr 3fr;
+    align-items: center;
+    gap: 2rem ;
+    border-radius: 1rem;
+    box-shadow: 0 0 6px var(--negro) ;
+}
+
+.contenidoImagen {
+    display: grid;
+    justify-items: center;
+    grid-area: img;
+    width: 100%;
+    height: 100%;
+    padding: 2rem 4rem;
+    box-shadow: 0 0 6px var(--negro) ;
+}
+
+.contenidoImagen img{
+    border-radius: 1rem;
+    height: 100%;
+    box-shadow: 0 0 6px var(--negro) ;
+}
+
+.contenidoExtra{
+    grid: extra;
+    display: flex;
+    flex-direction:column; 
+    font-size: 1.4rem;
+   
+}
+.contenidoTitulo {
+    grid-area: titulo;
+    width: 100%;
+}
+
+.contenidoTitulo::after{
+    content: "________________________";
+    color: #CEA283;
+    background-color: #CEA283;
+    font-size: 1.5rem;
+}
+
+
+.contenidoSinopsis {
+    grid-area: sinopsis;
+    font-size: 1.8rem;
+    width: 100%;
+}
+
+.contenidoBoton {
+    grid-area: boton;
+    width: 100%;
+    text-align: center;
+}
+
+.contenidoBoton a, .contenidoBoton a:visited{
+    font-size: 2rem;
+    background-color: #f7e7d5;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    text-decoration: none;
+    box-shadow: 0 0 6px var(--negro) ; 
+    color: var(--negro);
+}
+
+.contenidoBoton a:hover{
+    font-size: 2rem;
+    background-color: var(--azul);
+    color: var(--grisPagina);
+    border-radius: 1rem;
+    padding: 2rem;
+    text-decoration: none;
+;}
+
+.contenidoValoracion{
+    grid-area: valoracion;
+    box-shadow: 0 8px 32px 0 rgba(187, 187, 189, 0.37);
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+
+}
+
+.contenidoValoracion p {
+    text-align: center;
+}
+
+.valoracionBuena{
+    background-color: rgba(195, 216, 178, 0.8);
+}
+
+.valoracionMala{
+    background-color: rgba(235, 182, 182, 0.8);
+}
+
+.valoracionIntermedia{
+    background-color: rgba(247, 245, 142, 0.8);
+}
+
+.no-margin{
+    margin: 0;
+}
+
+.contacto{
+    color: var(--grisPagina);
+    text-transform: uppercase;
+    width: 100%;
+    padding: 2rem;
+    background-color: rgba(59, 2, 2, 0.9);
+    margin-bottom: 1rem;
+    border-radius: 1rem;
+    text-align: center;
+    box-shadow: var(--sombra);
+}
+
+.container{
+    display: flex;
+    padding: 1rem;
+    justify-content: space-around;
+    height: 50rem;
+}
+
+.container__form{
+    background-color: rgba( 255, 255, 255, .4 );
+    width: 50%;
+    padding: 1rem;
+    border-radius: 2rem;
+
+}
+
+.contacto__form{
+    display: flex;
+    text-align: left;    
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-evenly;
+    height: 100%;
+}
+
+.contacto__form input[type="text"], input[type="password"], input[type="email"]{
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: var(--grisPagina);
+    transition: background-color 0.5s ease;
+    margin: 1rem 0;
+    border-bottom: 0.1rem solid var(--grisPagina);
+}
+
+#mensaje{
+    border: 0.1rem solid var(--grisPagina);
+    border-radius: 1rem;
+    width: 100%;
+    height: 2rem;
+    overflow: visible;
+    padding: 2rem;
+}
+.contacto__form input[type="submit"]{
+    width: 20%;
+    margin: 0 auto;
+    padding: 1rem;
+    border: none;
+    border-radius: 1rem;
+    color: var(--grisPagina);
+    background-color: rgba(78, 255, 29, 0.5);
+    box-shadow: var(--sombra);
+    outline: none;
+}
+
+.contacto__form input[type="submit"]:hover{
+    background-color: var(--azul);
+
+}
+
+.contacto__form label{
+    color: var(--azul);
+}
+
+.contacto h3:hover{
+    color:var(--azul)
+}
+
+.contacto__form input::placeholder{
+    color: var(--grisPagina);
+}
+
+.container__add{
+    margin-left: 1rem;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 2rem;
+    border: 0.1rem solid var(--grisPagina);
+}
+
+.container__add:hover{
+    color: var(--azul);
+}
+
+
+.footer{
+    color: var(--grisPagina);
+    border-radius: 1rem 1rem 0 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(59, 2, 2, 0.9);
+    padding: 1rem;
+    box-shadow: var(--sombra);
+}
+
+.footer a, .footer a:visited{
+    text-decoration: none;
+    color: var(--grisPagina);
+    text-align: center;
+}
+
+.footer-text:hover, .footer a:hover, .footer a:visited:hover{
+    color: var(--azul);
+}
