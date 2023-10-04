@@ -15,4 +15,18 @@ document.addEventListener("DOMContentLoaded", function (){
     });
 
 
-})
+    const botonReiniciar = document.getElementById('botonReiniciar');
+
+    botonReiniciar.addEventListener("click", () =>{
+        columnas.forEach(columna => {
+            columna.classList.remove('columnaResaltada');
+            columna.style.transition = 'all 0.5s';
+        })
+
+        columnasTHead.forEach(columna => {
+            columna.classList.remove('headerResaltado');
+            columna.style.transition = 'all 1s'
+        })
+    })
+    
+})  
