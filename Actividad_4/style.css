@@ -49,15 +49,31 @@ body{
     cursor: pointer;
     background-color: #ffffff;
     color: #292828;
-    border-radius: 40px 0 40px 0;
 
+}
+
+.filaResaltada{
+    background-color: #7f91f7;
+    font-size: 20px;
 }
 
 .columnaResaltada{
-    background-color: #7f91f7;
-    font-size: 20px;
-    border-radius: 40px 0 40px 0;
+    color: #292828;
+    background-color: #ffffff;
 }
+
+.columnaResaltada:first-child{
+    color: #292828;
+    background-color: #ffffff;
+    border-radius: 40px 0 0 40px;
+}
+
+.columnaResaltada:last-child{
+    color: #292828;
+    background-color: #ffffff;
+    border-radius: 0 40px 40px 0;
+}
+
 
 .headerResaltado{
     background-color: #596fec;
