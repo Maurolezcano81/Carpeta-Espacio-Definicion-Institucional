@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@300;400;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    
+    <div class="titulo__trabajo">
+        <h1>Formulario de Personas</h1>
+    </div>
+
+    <section class="registro">
+        <div class="formulario__paso1" id="form_paso1">
+            <div class="formulario__mapa">
+
+                <div class="contenedor__icono actual" id="Paso1iconoPaso1">
+                    <h3>Paso 1</h3>
+                </div>
+                <div class="contenedor__icono" id="Paso1iconoPaso2">
+                    <h3>Paso 2</h3>
+                </div>
+                <div class="contenedor__icono" id="Paso1iconoPaso3">
+                    <h3>Resumen</h3>
+                </div>
+            </div>
+            <hr>
+
+            <form action="">
+                <div class="contenedor__input">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" name="nombre" id="nombre">
+                </div>
+
+                <div class="contenedor__input">
+                    <label for="apellido">apellido:</label>
+                    <input type="text" name="apellido" id="apellido">
+                </div>
+
+                <div class="contenedor__boton">
+                    <button type="button" class="transicion" id="botonPaso1">Siguiente</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="formulario__paso1" id="form_paso2">
+            <div class="formulario__mapa">
+
+                <div class="contenedor__icono" id="Paso2iconoPaso1">
+                    <h3>Paso 1</h3>
+                </div>
+                <div class="contenedor__icono actual" id="Paso2iconoPaso1">
+                    <h3>Paso 2</h3>
+                </div>
+                <div class="contenedor__icono" id="Paso2iconoPaso1">
+                    <h3>Resumen</h3>
+                </div>
+            </div>
+            <hr>
+
+            <form action="">
+                <div class="contenedor__input">
+                    <label for="dni">Dni:</label>
+                    <input type="text" name="dni" id="dni">
+                </div>
+
+                <div class="contenedor__input">
+                    <label for="cuil">cuil:</label>
+                    <input type="text" name="cuil" id="cuil">
+                </div>
+
+                <div class="contenedor__boton">
+                    <button type="button" id="botonVolverPaso1">Volver</button>
+                    <button type="button" id="botonPaso2" class="transicion">Siguiente</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="formulario__paso1" id="form_paso3">
+            <div class="formulario__mapa">
+
+                <div class="contenedor__icono" id="Paso2iconoPaso1">
+                    <h3>Paso 1</h3>
+                </div>
+                <div class="contenedor__icono" id="Paso2iconoPaso1">
+                    <h3>Paso 2</h3>
+                </div>
+                <div class="contenedor__icono actual" id="Paso2iconoPaso1">
+                    <h3>Resumen</h3>
+                </div>
+            </div>
+            <hr>
+
+            <table class="tabla" id="tabla">
+                <thead class="tabla__cabecera">
+                    <tr>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody class="tabla_cuerpo" id="cuerpo_tabla">
+                    <tr>
+                        <td>Nombre:</td>
+                        <td id="resumenNombre"></td>
+                    </tr>
+                    <tr>
+                        <td>Apellido:</td>
+                        <td id="resumenApellido"></td>
+                    </tr>
+                    <tr>
+                        <td>Dni:</td>
+                        <td id="resumenDni"></td>
+                    </tr>
+                    <tr>
+                        <td>Cuil:</td>
+                        <td id="resumenCuil"></td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="contenedor__boton">
+                <button type="button" id="botonVolverPaso2">Volver</button>
+                <button type="button" id="botonPaso3" class="transicion">Confirmar</button>
+            </div>
+        </div>
+
+
+    </section>
+
+
+    <footer>
+        <h3>Desarrollado por - Mauro Lezcano</h3>
+        <a href="https://github.com/Maurolezcano81/Carpeta-Espacio-Definicion-Institucional"><img src="icon.png" alt="github-icon"></a>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+</body>
+</html>

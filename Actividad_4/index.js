@@ -1,9 +1,9 @@
 document.addEventListener("DOMContentLoaded", function (){
 
-    const columnas = document.querySelectorAll('.td-body');
+    const columnas = document.querySelectorAll('.tr-body');
     columnas.forEach(function (columna){
         columna.addEventListener("click", function(){
-            this.classList.toggle('columnaResaltada');
+            columna.classList.toggle('columnaResaltada');
         })
     });
 
@@ -30,3 +30,7 @@ document.addEventListener("DOMContentLoaded", function (){
     })
     
 })  
+
+function holaNico (nico){
+    alert(nico);
+}

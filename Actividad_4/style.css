@@ -21,6 +21,7 @@ body{
 
 .thead{
     border-bottom: 2px solid #ececec85;
+    height: 100px;
 }
 
 .tr-head{
