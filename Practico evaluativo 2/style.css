@@ -57,6 +57,10 @@ html {
     padding: 1rem;
     text-align: center;
 }
+
+.header p{
+    color: var(--blanco-1);
+}
 .header img{
     max-width: 10rem;
     max-height: 5rem;
